@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Task</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include('navbar') %>
+    <h1>Update Task List</h1>
+    <div class="cont">
+        <!-- Notice action includes the task id -->
+        <form action="/update/<%= result._id %>" method="post">
+            <input type="text" value="<%= result.title %>" name="title" placeholder="Task Title"><br>
+            <input type="text" value="<%= result.details %>" name="details" placeholder="Task Details">
+            <button class="addbtn">Update Task</button>
+        </form>
+    </div>
+</body>
+</html>
